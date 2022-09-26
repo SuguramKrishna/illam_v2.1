@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Illam</title>
+  <%= stylesheet_link_tag 'application' , media: 'all' , 'data-turbolinks-track'=> true %>
+    <%= javascript_include_tag 'application' , 'data-turbolinks-track'=> true %>
+      <%= csrf_meta_tags %>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/a85234e92c.js" crossorigin="anonymous"></script> 
+</head>
+
+<body>
+  <nav>
+    <div class="navbar">
+      <div class="logo">
+        <a href="/">Illam</a>
+      </div>
+      <div class="navbar-links-div">
+        <ul class="links">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/pages/build_prog">About</a>
+          </li>
+          <li>
+            <a href="#">Properties</a>
+            <ul class="sub-menu">
+              <li><a href="/properties/listing">Look For A Property</a></li>
+              <li><a href="/properties/adding">Post Your Property</a></li>
+            </ul>
+          </li>
+          <li>
+             <a href="/contacts">Contact</a>
+          </li>
+          <li>
+            <% if current_user %> 
+            <a href="#"><em class="fa-regular fa-circle-user fa_icon"></em></a> 
+              <ul class="sub-menu-user">
+              <li>
+                 <%= current_user.name %>
+              </li>
+              <%# </span></ul> %>
+              <%# <ul class="sub-menu"> %>
+              <li>
+              <%= link_to 'Sign Out' , sign_out_path, method: :delete, data: {confirm: 'Are you sure ?'} %>
+              </li>
+              </ul>
+              <% else %>
+              <ul>
+                <%= link_to 'Sign In' , sign_in_path %>
+              </ul>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <%= yield %>
+
+</body>
+
+</html>

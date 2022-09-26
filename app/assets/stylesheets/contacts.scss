@@ -1,0 +1,59 @@
+// .alert-error {
+//     background-color: #f2dede;
+//     border-color: #eed3d7;
+//     color: #b94a48;
+//     text-align: left;
+//     }
+    
+//     .alert-alert {
+//     background-color: #f2dede;
+//     border-color: #eed3d7;
+//     color: #b94a48;
+//     text-align: left;
+//     }
+    
+//     .alert-success {
+//     background-color: #dff0d8;
+//     border-color: #d6e9c6;
+//     color: #468847;
+//     text-align: left;
+//     }
+    
+//     .alert-notice {
+//     background-color: #dff0d8;
+//     border-color: #d6e9c6;
+//     color: #468847;
+//     text-align: left;
+//     }
+
+
+.contact_main_container{
+    background-color: #fff;
+    font-size: 1.25rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    margin-top: 3%;
+}
+
+.form_control_textarea{
+    resize: none;
+    width: 95%;
+    height: 120px;
+    padding: 1%;
+    outline: none;
+    font-size: 1.25rem;
+    font-weight: 600;
+    background-color: transparent;
+    border-radius: 20px;
+    border:  2px solid #e3e3e3;
+    padding: 2%;
+}
+
+.form_control_textarea:focus{
+    border: #c60021 2px solid;
+  }

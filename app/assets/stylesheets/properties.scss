@@ -1,0 +1,218 @@
+// Place all the styles related to the adds controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.add_section {
+  background-color: #e3e3e3;
+  height: 100vh;
+  margin-top: 0.5%;
+}
+
+.add_main_container {
+  background-color: #fff;
+  font-size: 1.25rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 65%;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.basic_detail {
+  margin: 2%;
+  color: #c60021;
+  font-weight: 600;
+}
+
+.basic_detail table {
+  width: 100%;
+}
+
+.basic_detail table .name_td {
+  width: 50%;
+  padding: 0 2%;
+}
+
+.prop_detail {
+  margin: 2%;
+  color: #c60021;
+  font-weight: 600;
+}
+
+.prop_detail table {
+  width: 100%;
+  margin-top: 5%;
+}
+
+.prop_detail table td {
+  width: 33%;
+  padding: 0 2%;
+}
+
+.surrounding_detail {
+  margin: 2%;
+  color: #c60021;
+  font-weight: 600;
+}
+
+.surrounding_detail table {
+  width: 100%;
+  margin-top: 5%;
+}
+
+.surrounding_detail table td {
+    width: 33%;
+    padding: 0 2%;
+}
+
+.form_input {
+  width: 95%;
+  padding: 1%;
+  outline: none;
+  font-size: 1.25rem;
+  font-weight: 600;
+  background-color: transparent;
+  border-radius: 30px;
+  border: 2px solid #e3e3e3;
+}
+
+.form_input:focus {
+  border: #c60021 2px solid;
+}
+ 
+
+// Listing CSS
+
+.list_section {
+  background-color: #e3e3e3;
+  margin-top: 0.5%;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 0.35fr 1fr;
+  grid-gap: 20px;
+  padding: 0 50px;
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.filter-div {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 8px;
+  padding: 24px 20px 0 20px;
+  margin-top: 2%;
+}
+
+.filter-div .page-heading {
+  background-color: transparent;
+  color: #c60021;
+}
+
+/* search bar css */
+
+
+.search-box {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 2%;
+}
+
+input.search-bar {
+  margin: 0 auto;
+  width: 100%;
+  height: 45px;
+  padding: 0 20px;
+  font-size: 1.15rem;
+  border: 1px solid #d0cfce;
+  outline: none;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.search-icon {
+  position: relative;
+  float: right;
+  width: 25px;
+  height: 75px;
+  top: -35px;
+  background-color: transparent;
+  right: 10px;
+  color: #c60021;
+}
+
+input.search-bar:focus {
+  border: 1px solid#C60021;
+  box-shadow: 0 3px 6px rgba(230, 18, 18, 0.717),
+    0 3px 6px rgba(255, 0, 0, 0.589);
+}
+
+/* lisitng css */
+
+.listing-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:2rem;
+  margin-top: 5%;
+}
+
+.listing-container .prop-box{
+  flex:1 1 30rem;
+  border-radius: .5rem;
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+}
+
+.listing-container .prop-box img{
+  height: 25rem;
+  width:100%;
+  object-fit: cover;
+}
+
+.listing-container .prop-box .content{
+  padding:2rem;
+  background-color: white;
+}
+
+.listing-container .prop-box .content h3{
+  font-size:2rem;
+  color: #C60021;
+}
+
+.listing-container .prop-box .content .details{
+  font-size: 1.5rem;
+  color:#333;
+  padding-top: 1rem;
+ 
+}
+
+.listing-container .prop-box .content .details span{
+color: #C60021;
+  font-size: 1.25rem;
+  float: right;
+  margin-right: 10%;
+}
+
+.owner-btn{
+  display: inline-block;
+  margin-top: 5%;
+  background-color: #C60021;
+  color:#fff;
+  padding: 2%;
+  border:.2rem solid #C60021;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.owner-btn:hover{
+  box-shadow: #C60021 0px 7px 14px, #fff 0px 5px 5px;
+}

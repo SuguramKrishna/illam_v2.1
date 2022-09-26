@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  prop_name: MyString
+  prop_type: MyString
+  room: 
+  sqft: 
+  hsptl_dist: 
+  amount: 
+  address: 
+  attachment: MyString
+  user_id: 
+
+two:
+  prop_name: MyString
+  prop_type: MyString
+  room: 
+  sqft: 
+  hsptl_dist: 
+  amount: 
+  address: 
+  attachment: MyString
+  user_id: 

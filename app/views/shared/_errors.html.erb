@@ -1,0 +1,13 @@
+<% if object.errors.any? %>
+  <div class="error_pannel">
+    <div class="panel-heading">
+      <h5><i class="error_message_heading"></i> Oops !! Something Went Wrong</h5>
+    </div>
+
+    <ul class="panel_body">
+      <% object.errors.full_messages.each do |msg| %>
+        <li class="error_message"><%= msg%></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

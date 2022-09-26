@@ -1,0 +1,44 @@
+<section class="user_section">
+    <div class="user_heading">
+        <h1>Register</h1>
+    </div>
+    
+    <div class="user_main_container">
+            <%= form_for @user do |f|%>
+            <%= render 'shared/errors' , object: @user %>
+            <div class="form_fields">
+                <%= f.label :name, class: 'form_label' %>
+                <%= f.text_field :name, class: 'form_control',  autofocus: true %>
+            </div>
+            
+            <div class="form_fields">
+                <%= f.label :email, class: 'form_label' %>
+                <%= f.email_field :email, class: 'form_control' %>
+            </div>
+            
+            <div class="form_fields">
+                <%= f.label :password, class: 'form_label'%>
+                <%= f.password_field :password, class: 'form_control' %>
+            </div>
+            
+            <div class="form_fields">
+                <%= f.label :password_confirmation, class: 'form_label' %>
+                <%= f.password_field :password_confirmation, class: 'form_control' %>
+            </div>
+            
+            <div class="form_fields">
+                <%= f.label :phone_number, class: 'form_label' %>
+                <%= f.number_field :phone_number, class: 'form_control' %>
+            </div>
+            
+            <div class="form_fields">
+                <%= f.label :role, class: 'form_label' %>
+                <%= f.select :role, options_for_select([["Owner"],["Buyer"]]), class:'form_control' %>
+            </div>
+            
+            <div class="sign_up_button">   
+                <%= f.submit 'Register' , class: 'user_button' %>
+                <% end %>
+            </div>
+        </div>
+</section>

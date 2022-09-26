@@ -1,0 +1,48 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.build-page{
+    background-color: #e3e3e3;
+    height: 100vh;
+    margin-top: .5%;
+}
+
+.page-nf {
+    font-size: 3rem;
+    color: #c60021;
+    text-align: center;
+    padding-top: 10%;
+}
+
+.role_page_section{
+    background-color: #e3e3e3;
+    height: 100vh;
+    margin-top: .5%;
+}
+
+.role_main_container{
+    background-color: #fff;
+    font-size: 1.25rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    height: 40%;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.role_para{
+padding: 5%;
+font-size: 1.50rem;
+text-align: center;
+margin-top: 15%;
+font-weight: 600;
+}
+
+.role_span{
+    color: #c60021;
+
+}

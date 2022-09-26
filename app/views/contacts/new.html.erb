@@ -1,0 +1,31 @@
+<section class="user_section">
+    <div class="user_heading">
+        <h1>Contact Us</h1>
+    </div>
+
+    <div class="contact_main_container">
+       <%= form_for @contact do |f| %>
+         <%= render 'shared/errors', object: @contact %>
+       <div class="form_fields">
+          <%= f.label :name, class: 'form_label' %>
+          <%= f.text_field :name,class: 'form_control' %>
+       </div>
+
+        <div class="form_fields">
+          <%= f.label :email, class: 'form_label' %>
+          <%= f.text_field :email, class: 'form_control' %>
+       </div>
+
+        <div class="form_fields">
+           <%= f.label :Reason_for_Contacting, class: 'form_label' %>
+           <%= f.text_area :message, class: 'form_control_textarea' %>
+       </div>
+
+       <div class="sign_up_button">   
+           <%= f.submit 'Contact Us' , class: 'user_button' %>
+       <% end %>
+       </div>
+    </div>
+</section>
+
+

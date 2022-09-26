@@ -1,0 +1,96 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.user_section{  
+    background-color: #e3e3e3;
+    height: 100vh;
+    margin-top: .5%;
+  }
+  
+  .user_heading {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #c60021;
+    padding-top: 2%;
+  }
+  
+  .user_main_container{
+      background-color: #fff;
+      font-size: 1.25rem;
+      position: absolute;
+      top: 50%; 
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 30%;
+      margin-top: 8%;
+      border-radius: 8px;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+  
+  .form_fields{
+      padding-left: 5%;
+      padding-top: 2%;
+      color: #c60021;
+      font-weight: 600;
+  }
+  
+  .form_label{
+    margin-bottom: 5px;
+    display: inline-block;
+    letter-spacing: 1px;
+  }
+  
+  .form_control{
+    width: 95%;
+    padding: 2%;
+    outline: none;
+    font-size: 1.25rem;
+    font-weight: 600;
+    background-color: transparent;
+    border-radius: 30px;
+    border:  2px solid #e3e3e3;
+  }
+  
+  select{
+    width: 95%;
+    padding: 1%;
+    outline: none;
+    font-size: 1.25rem;
+    font-weight: 600;
+    background-color: transparent;
+    border-radius: 30px;
+    border:  2px solid #e3e3e3;
+  }
+  
+  .form_control:focus{
+    border: #c60021 2px solid;
+  }
+  
+  .sign_up_button{
+    text-align: center;
+    margin: 5%;
+  }
+  
+  .user_button{
+    width: 45%;
+    padding: 1%;
+    outline: none;
+    font-size: 1.25rem;
+    font-weight: 600;
+    background-color: transparent;
+    border-radius: 30px;
+    color: #c60021;
+    border:  2px solid #e3e3e3;
+  }
+  
+  .user_button:hover{
+    border: #c60021 2px solid;
+    color: black;
+  }
+  
+  
+  
+  
+  

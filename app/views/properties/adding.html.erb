@@ -1,0 +1,69 @@
+<section class="add_section">
+  <div class="add_main_container">
+  <%= form_tag add_property_path, html: { multipart: true } do %>
+  <%= render 'shared/errors', object: @property %>
+  <div class="basic_detail">
+  <table>
+    <tr>
+      <td class="name_td">
+        <%= label_tag  "prop_name", "Name", class: 'form_label adding_page' %>
+        <%= text_field_tag "property[prop_name]",nil, class: 'form_input', autofocus: true %>
+      </td>
+      <!-- <td>
+        <%= label_tag  "prop_name", "Image",class: 'form_label' %>
+        <%= file_field_tag "property[attachment]", class: 'form_input' %>
+      </td> -->
+    </tr>
+  </table>
+  </div>
+
+  <div class="prop_detail">
+  <table>
+    <tr>
+      <td>
+        <%= label_tag  "prop_type", "Type", class: 'form_label' %>  
+        <%= select_tag "property[prop_type]",options_for_select([["Rent","Rent"],["Sales","Sales"],["Lease","Lease"]])%>
+      </td>
+
+      <td>
+        <%= label_tag  "prop_room", "Rooms", class: 'form_label' %>
+        <%= text_field_tag "property[room]", nil,class: 'form_input' %>
+      </td>
+
+      <td>
+        <%= label_tag  "prop_sqft", "Sqft", class: 'form_label' %>
+        <%= text_field_tag "property[sqft]",nil, class: 'form_input' %>
+      </td>
+    </tr>
+  </table>
+  </div>
+
+  <div class="surrounding_detail">
+    <table>
+      <tr>
+        <td class="dist_td">
+          <%= label_tag  "prop_dist", "Distance To Nearby Hospital", class: 'form_label' %>
+          <%= text_field_tag "property[hsptl_dist]", nil,class: 'form_input' %>
+        </td>
+
+        <td>
+          <%= label_tag  "prop_amount", "Amount", class: 'form_label' %>
+          <%= text_field_tag "property[amount]", nil,class: 'form_input' %>
+        </td>
+
+        <td>
+          <%= label_tag  "prop_address", "Address", class: 'form_label' %>
+          <%= text_field_tag "property[address]",nil, class: 'form_input' %>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+    <div class="sign_up_button">   
+      <%= submit_tag 'Add Property' , class: 'user_button' %>
+    </div>
+<% end %>
+
+  </div>
+</section>

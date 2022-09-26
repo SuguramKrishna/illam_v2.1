@@ -1,0 +1,36 @@
+<section class="user_section">
+  <div class="sign_in_heading">
+    <h1>Sign In</h1>
+  </div>
+
+  <div class="sign_in_main_container">
+    <%= form_for @user_session do |f| %>
+      <%= render 'shared/errors' , object: @user_session%>
+
+        <div class="form_fields">
+          <%= f.label :email, class: 'form_label' %>
+            <%= f.email_field :email, class: 'form_control', autofocus: true %>
+        </div>
+
+        <div class="form_fields">
+          <%= f.label :password, class: 'form_label' %>
+            <%= f.password_field :password, class: 'form_control' %>
+        </div>
+
+        <div class="form_fields">
+          <%= f.label :remember_me, class: 'form_label' %>
+            <%= f.check_box :remember_me, class: 'form_checkbox' %>
+        </div>
+
+        <div class="sign_up_button">
+        <%= f.submit "Log in!" , class: 'user_button' %>
+      </div>
+
+          <%= link_to sign_up_path, class: 'user_link' do %>
+            <p class="link_p">Don't have an account <span class="link_span">Sign Up</span> here</p> 
+            <% end %>
+              <% end %>
+
+  </div>
+
+</section>
