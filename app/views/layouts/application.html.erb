@@ -6,6 +6,7 @@
   <%= stylesheet_link_tag 'application' , media: 'all' , 'data-turbolinks-track'=> true %>
     <%= javascript_include_tag 'application' , 'data-turbolinks-track'=> true %>
       <%= csrf_meta_tags %>
+     
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap" rel="stylesheet">
@@ -31,6 +32,13 @@
             <ul class="sub-menu">
               <li><a href="/properties/listing">Look For A Property</a></li>
               <li><a href="/properties/adding">Post Your Property</a></li>
+               <% if current_user %> 
+               <% if current_user.role=="Owner"%>
+               <li>
+                <li><a href="/properties/my_property">My Properties</a></li>
+              </li>
+               <% end %>
+              <%end%>
             </ul>
           </li>
           <li>

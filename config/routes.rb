@@ -7,19 +7,29 @@ Rails.application.routes.draw do
 
   get 'properties/listing'
 
+  get 'properties/my_property', to: 'properties#my_prop'
+
   get 'pages/build_prog'
 
   get 'user_sessions/sign_in'
 
   get 'users/sign_up'
 
-  get 'homes/index'
+  get 'homes/index', to: 'homes#index'
 
   get 'pages/build_prog'
 
   get 'pages/role'
 
+  get 'properties/booking'
+
+  get '/booking/:id', to: 'properties#booking_confirmation'
+
+  get '/search_prop', to: 'homes#search_prop'
+
   root to: 'homes#index'
+
+  delete '/delete_prop/:id' => 'properties#delete_prop'
 
 
   resources :users, only: [:sign_up, :create]
@@ -94,4 +104,9 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+end
+
+require 'sidekiq/web'
+Rails.application.routes.draw do
+  mount Sidekiq::Web => '/sidekiq'
 end

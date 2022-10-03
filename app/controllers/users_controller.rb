@@ -7,8 +7,9 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(users_params)
+    # debugger
     if @user.save
-      UserMailer.welcome_email(@user).deliver_now
+      WelcomeWorker.new.perform params['user']
       flash[:success] = "Account registered!"
       redirect_to root_path
     else

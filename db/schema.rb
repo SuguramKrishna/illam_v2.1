@@ -11,12 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20220925171317) do
+ActiveRecord::Schema.define(version: 20220927100443) do
 
   create_table "contacts", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "message",    limit: 255
+    t.integer  "user_id",    limit: 4
+    t.string   "name",       limit: 255
+    t.string   "email",      limit: 255
   end
+
+  add_index "contacts", ["user_id"], name: "index_contacts_on_user_id", using: :btree
 
   create_table "properties", force: :cascade do |t|
     t.string   "prop_name",  limit: 255
@@ -53,5 +59,6 @@ ActiveRecord::Schema.define(version: 20220925171317) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
+  add_foreign_key "contacts", "users"
   add_foreign_key "properties", "users"
 end

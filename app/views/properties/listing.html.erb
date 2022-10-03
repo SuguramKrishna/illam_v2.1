@@ -1,9 +1,9 @@
 <section class="list_section">
 <div class="main-container">
 
-  <div class="filter-div">
+  <!-- <div class="filter-div">
     <p class="page-heading">Filters</p>
-  </div>
+  </div> -->
 
    <div class="list-main-container">
     <div class="search-div">
@@ -25,15 +25,50 @@
               <div class="details"><p>Sq.Ft <span><%= prop.sqft%></span></p></div>
               <div class="details"><p>Rent <span><%= prop.amount%></span></p></div>
               <div class="details"><p>Distance To Hospital <span><%= prop.hsptl_dist%></span> </p></div>
-              <a href="#" class="owner-btn">Get Owner Details</a>
+             <a href="/booking/<%=prop.id%>"><button class="owner-btn">Book Property</button></a> 
             </div>
-        </div>
-        <%end%>
+         </div>
+         <%end%>
     </div>
+  
+<!-- 
+<div class="popup" id="popup-overlay">
+  <div class="owner-detail">
+    <p class="owner-heading">
+      Owner Details
+    </p>
 
-    </div>
+    <p class="owner-contact">
+      <span><i class="fa-solid fa-user"></i></span> Name
+     </p>
 
+    <p class="owner-contact">
+     <span><i class="fa-solid fa-phone"></i></span> Phone Number
+    </p>
+
+    <p class="owner-contact">
+      <span><i class="fa-solid fa-envelope"></i></span> Email
+    </p>
+  </div>
+</div> -->
 
 
 </div>
 </section>
+
+
+
+<!-- 
+<script>
+
+
+
+  function popupover() {
+    document.getElementById("popup-overlay").style.display = "block";
+  }
+
+  function crossign() {
+    document.getElementById("popup-overlay").style.display = "none";
+  }
+
+</script> -->

@@ -50,3 +50,6 @@ gem 'carrierwave'
 
 gem 'mail_form'
 gem 'simple_form'
+gem 'sidekiq'
+# gem "searchkick"
+# gem "elasticsearch"  

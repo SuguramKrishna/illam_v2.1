@@ -1,0 +1,39 @@
+<section class="list_section">
+<div class="main-container">
+
+  <!-- <div class="filter-div">
+    <p class="page-heading">Filters</p>
+  </div> -->
+
+   <div class="list-main-container">
+    <div class="search-div">
+      <form class="search-box">
+        <input type="text" class="search-bar" placeholder="Search For Buy, Rent or Lease">
+        <a href="#"><em class="fa-solid fa-magnifying-glass search-icon"></em></a>
+      </form>
+    </div>
+
+    <div class="listing-container">
+        <%  @search_prop.each do |prop| %>     
+        <div class="prop-box">
+            <%= image_tag('home4.jpg',{class: 'bg-img' }) %>
+            <div class="content">
+              <h3><em class="fa-solid fa-house-chimney"></em> <%= prop.prop_name%></h3>
+              <div class="details"><p>Address <span><%= prop.address%></span></p></div>
+              <div class="details"><p>Property For <span><%= prop.prop_type%></span></p></div>
+              <div class="details"><p>Rooms <span><%= prop.room%></span></p></div>
+              <div class="details"><p>Sq.Ft <span><%= prop.sqft%></span></p></div>
+              <div class="details"><p>Rent <span><%= prop.amount%></span></p></div>
+              <div class="details"><p>Distance To Hospital <span><%= prop.hsptl_dist%></span> </p></div>
+              <a href="#" class="owner-btn">Get Owner Details</a>
+            </div>
+        </div>
+        <%end%>
+    </div>
+
+    </div>
+
+
+
+</div>
+</section>

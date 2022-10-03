@@ -1,0 +1,19 @@
+<section class="booking-section">
+    <div class="booking-main-container">
+        <div class="booking-detail">
+            <%if $details%>
+            <%# <%@property_detail = Property.find_by(user_id:$details["id"])%>  
+            <%@user_detail = User.find( $details["user_id"])%>
+            <p class="booking-heading">
+                Your Booking Details
+            </p>
+
+            <p class="prop-p">
+               Great !! you are proceeding to book the property named <span class="booking-detail-span"><%= $details.prop_name %> </span> which is for <span class="booking-detail-span"><%= $details.prop_type %> </span> it has <span class="booking-detail-span"><%= $details.room %> </span> spacious room for a family to live a comfortable life. The property has <span class="booking-detail-span"><%= $details.sqft %> </span> sqft and its amount is <span class="booking-detail-span"><%= $details.amount %> </span>. The property you are looking is located in <span class="booking-detail-span"><%= $details.address %> </span>. This property belongs to <span class="booking-detail-span"><%= @user_detail.name %></span> his/her email address to contact is <span class="booking-detail-span"><%= @user_detail.email %></span> or you can contact them using their number <span class="booking-detail-span"><%= @user_detail.phone_number %></span>
+               </span>
+            </p>
+            <%end%>
+
+        </div>
+    </div>
+</section>
