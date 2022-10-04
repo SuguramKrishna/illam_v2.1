@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  card_holder_name: MyString
+  password: MyString
+  card_number: 
+  card_expiry_month: MyString
+  card_expiry_year: 1
+  users_id: 
+  properties_id: 
+
+two:
+  card_holder_name: MyString
+  password: MyString
+  card_number: 
+  card_expiry_month: MyString
+  card_expiry_year: 1
+  users_id: 
+  properties_id: 

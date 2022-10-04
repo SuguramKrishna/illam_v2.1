@@ -31,6 +31,11 @@ Rails.application.routes.draw do
 
   delete '/delete_prop/:id' => 'properties#delete_prop'
 
+  get 'payments/payment'
+  match '/pay', to: 'payments#pay', via: :post
+
+
+
 
   resources :users, only: [:sign_up, :create]
 
@@ -108,5 +113,7 @@ end
 
 require 'sidekiq/web'
 Rails.application.routes.draw do
+  get 'payments/payment'
+
   mount Sidekiq::Web => '/sidekiq'
 end

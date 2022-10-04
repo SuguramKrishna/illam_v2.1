@@ -1,0 +1,101 @@
+<section class="payment-section">
+    <div class="payment-main-container">
+        <div class="payment_title">
+           <p class="">Your Payment</p>
+        </div>
+
+        <form action="/pay" method="post">
+          <input
+            type="hidden"
+            name="authenticity_token"
+            value="<%= form_authenticity_token %>"
+          />
+        <div class="payment_basic_details">
+          <div class="card_holder_name_div">
+            <input
+              type="text"
+              name="payment_details[card_holder_name]"
+              id=""
+              required
+              autofocus
+              placeholder="Card Holder Name"
+              pattern="^[a-zA-Z0-9_ ]+( [a-zA-Z0-9_]+)*$"
+              minlength="3"
+              class="card_holder_name"
+            />
+          </div>
+          <div class="cvv_div">
+            <input type="password" name="payment_details[password]" maxlength="3" minlength="3" required id="" placeholder="CVV" class="cvv" />
+          </div>
+        </div>
+      
+        <div class="card_number_div">
+          <input
+            type="password"
+            name="payment_details[card_number]"
+            required
+            maxlength="16"
+            minlength="16"
+            id=""
+            placeholder="XXXX XXXX XXXX XXXX"
+            class="card_number"
+          />
+        </div>
+        <div class="card_number_text">Please enter your ATM card number.</div>
+      
+        <div class="car_expiry_details_and_amount_div">
+          <select name="payment_details[card_expiry_month]" id="" required class="expiry_month">
+            <option value="" disabled selected hidden >Month</option>
+            <option value="jan">Jan</option>
+            <option value="Feb">Feb</option>
+            <option value="Mar">Mar</option>
+            <option value="Apr">Apr</option>
+            <option value="May">May</option>
+            <option value="Jun">Jun</option>
+            <option value="Jul">Jul</option>
+            <option value="Aug">Aug</option>
+            <option value="Sep">Sep</option>
+            <option value="Oct">Oct</option>
+            <option value="Nov">Nov</option>
+            <option value="Dec">Dec</option>
+          </select>
+      
+          <select name="payment_details[card_expiry_year]" id="" required class="expiry_year">
+            <option value="" disabled selected hidden >Year</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+            <option value="2028">2028</option>
+            <option value="2029">2029</option>
+            <option value="2030">2030</option>
+          </select>
+      
+          <input
+            type="number"
+            name=""
+            id=""
+            value="<%= $details.amount %>"
+            class="amount_payable"
+            disabled
+          />
+
+          <input
+          type="hidden"
+          name="payment_details[properties_id]"
+          id=""
+          value="<%= $details.id %>"
+          class="amount_payable"
+        />
+        </div>
+      
+        <div class="card_expiry_text">Card Exipry Details</div>
+        <div class="amount_payable_text">Amount payable is per day price.</div>
+      
+        <div  > 
+         <input type="submit" value="Pay Now" class="pay_now_button"> 
+        </div>
+        </form>
+      </div>
+      
+</section>
