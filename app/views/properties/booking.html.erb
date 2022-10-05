@@ -1,7 +1,7 @@
 <section class="booking-section">
     <div class="booking-main-container">
         <div class="booking-detail">
-            <%if $details%>
+             <%if $details%>
             <%# <%@property_detail = Property.find_by(user_id:$details["id"])%>  
             <%@user_detail = User.find( $details["user_id"])%>
             <p class="booking-heading">
@@ -14,8 +14,8 @@
             </p>
             <%end%>
             
-            <div  > 
-               <button>Pay</button>
+            <div class="confirm-div" > 
+               <a href="/payments/payment"><button class="confirm-button">Proceed To Payment</button></a>
             </div>
         </div>
     </div>

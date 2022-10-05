@@ -34,6 +34,8 @@ Rails.application.routes.draw do
   get 'payments/payment'
   match '/pay', to: 'payments#pay', via: :post
 
+  get 'payments/payment_confirmation'
+
 
 
 
@@ -43,8 +45,8 @@ Rails.application.routes.draw do
 
 
   get 'properties/adding', to: 'properties#list'
-  match 'properties/adding_property', to: 'properties#adding_property', via: :post, as: :add_property
-
+  match 'properties/add', to: 'properties#create', via: :post, as: :add_property
+  
 
   delete '/sign_out', to: 'user_sessions#destroy', as: :sign_out
   get '/sign_in', to: 'user_sessions#sign_in', as: :sign_in
@@ -53,6 +55,8 @@ Rails.application.routes.draw do
 
 
   match '/contacts',to: 'contacts#new',via: 'get'
+  match '/properties',to: 'properties#new',via: 'get'
+  resources "properties", only: [:new, :create]
   resources "contacts", only: [:new, :create]
 
   # The priority is based upon order of creation: first created -> highest priority.

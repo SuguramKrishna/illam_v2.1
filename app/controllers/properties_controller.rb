@@ -1,5 +1,7 @@
 class PropertiesController < ApplicationController
- 
+ def new 
+  @properties = Property.new
+ end
 
   def list
     @property  = Property.new
@@ -17,7 +19,8 @@ class PropertiesController < ApplicationController
     end
   end
 
-  def adding_property
+  def create
+    @property  = Property.new
     @properties = Property.new(prop_params)
     @properties.user_id = current_user.id
     if @properties.save

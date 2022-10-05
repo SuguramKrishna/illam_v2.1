@@ -24,14 +24,14 @@
           <li>
             <a href="/">Home</a>
           </li>
-          <li>
+          <%# <li>
             <a href="/pages/build_prog">About</a>
-          </li>
+          </li> %>
           <li>
             <a href="#">Properties</a>
             <ul class="sub-menu">
               <li><a href="/properties/listing">Look For A Property</a></li>
-              <li><a href="/properties/adding">Post Your Property</a></li>
+              <li><a href="/properties">Post Your Property</a></li>
                <% if current_user %> 
                <% if current_user.role=="Owner"%>
                <li>

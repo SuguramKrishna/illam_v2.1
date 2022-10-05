@@ -1,0 +1,21 @@
+<section class="payment-section">
+    <div class="payment-confirmation-main-container">
+        <div class="payment-detail">
+            <%if $details%>
+            <%# <%@property_detail = Property.find_by(user_id:$details["id"])%>  
+            <%@user_detail = User.find( $details["user_id"])%>
+            <p class="booking-heading">
+               Payment Successfull
+            </p>
+
+            <p class="prop-p">
+                You have Successfully completed the payment of ₹ <span class="booking-detail-span"><%= $details.amount %> </span> for the property <span class="booking-detail-span"><%= $details.prop_name %> </span> please contact to <span class="booking-detail-span"><%= @user_detail.name %> </span> at <span class="booking-detail-span"><%= @user_detail.email %> </span> or <span class="booking-detail-span"><%= @user_detail.phone_number %></span> for more details.
+             </p>
+             <%end%>
+
+             <div class="confirm-div" > 
+                <a href="/"><button class="confirm-button">Back To Home</button></a>
+             </div>
+         </div>
+    </div>
+</section>

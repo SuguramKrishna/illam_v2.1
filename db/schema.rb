@@ -24,6 +24,21 @@ ActiveRecord::Schema.define(version: 20220927100443) do
 
   add_index "contacts", ["user_id"], name: "index_contacts_on_user_id", using: :btree
 
+  create_table "payment_details", force: :cascade do |t|
+    t.string   "card_holder_name",  limit: 255
+    t.string   "password",          limit: 255
+    t.integer  "card_number",       limit: 8
+    t.string   "card_expiry_month", limit: 255
+    t.integer  "card_expiry_year",  limit: 4
+    t.integer  "users_id",          limit: 4
+    t.integer  "properties_id",     limit: 4
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+  end
+
+  add_index "payment_details", ["properties_id"], name: "index_payment_details_on_properties_id", using: :btree
+  add_index "payment_details", ["users_id"], name: "index_payment_details_on_users_id", using: :btree
+
   create_table "properties", force: :cascade do |t|
     t.string   "prop_name",  limit: 255
     t.string   "prop_type",  limit: 255

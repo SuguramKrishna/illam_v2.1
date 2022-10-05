@@ -2,237 +2,178 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.payment-section {
+  background-color: #e3e3e3;
+  height: 100vh;
+  margin-top: 0.5%;
+}
 
 .payment-main-container {
-    background-color: #fff;
+  background-color: #fff;
   font-size: 1.25rem;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
+  width: 60%;
   height: 65%;
   border-radius: 8px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  }
+}
 
-  .payment-para{
-    color: #C60021;
-    font-size: 1.25rem;
-    text-align: center;
-    font-weight: 600;
-  }
- 
-  .payment_basic_details {
-    display: flex;
-    position: absolute;
-  }
-  
-  .card_holder_name {
-    margin-left: 30px;
-    padding-left: 5px;
-    background: none;
-    font-size: 20px;
-    border: none;
-    outline: none;
-    border-bottom: 3px solid rgb(119, 119, 119);
-    width: 350px;
-    height: 40px;
-    font-family: "Jost", sans-serif;
-    font-family: "Redressed", cursive;
-    font-family: "Varela Round", sans-serif;
-  }
-  .cvv {
-    margin-left: 50px;
-    padding-left: 5px;
-    background: none;
-    font-size: 20px;
-    border: none;
-    outline: none;
-    border-bottom: 3px solid rgb(119, 119, 119);
-    width: 150px;
-    height: 40px;
-    font-family: "Jost", sans-serif;
-    font-family: "Redressed", cursive;
-    font-family: "Varela Round", sans-serif;
-  }
-  .card_number {
-    margin-left: 30px;
-    margin-top: 160px;
-    padding-left: 5px;
-    background: none;
-    font-size: 20px;
-    border: none;
-    outline: none;
-    border-bottom: 3px solid rgb(119, 119, 119);
-    width: 560px;
-    height: 40px;
-    font-family: "Jost", sans-serif;
-    font-family: "Redressed", cursive;
-    font-family: "Varela Round", sans-serif;
-  }
-  .card_number_text{
-      font-size: 15px;
-      // word-spacing: 3px;
-      margin-left: 30px;
-      margin-top: 10px;
-      height: 30px;
-      color: darkgrey;
-      font-family: "Jost", sans-serif;
-      font-family: "Redressed", cursive;
-      font-family: "Varela Round", sans-serif;
-  }
-  .car_expiry_details_and_amount_div {
-    display: flex;
-    margin-top: 20px;
-  }
-  .expiry_month {
-    width: 90px;
-    height: 45px;
-    font-size: 20px;
-    margin-left: 30px;
-    border: none;
-    outline: none;
-  //   background-color: none;
+.payment-title {
+  color: #c60021;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 800;
+  margin-top: 2%;
+}
+
+.payment-basic-details {
+  display: flex;
+  position: absolute;
+  margin: 5%;
+}
+
+.card-holder-name {
+  font-size: 1.45rem;
+  border: none;
+  outline: none;
+  border-bottom: 3px solid #c60021;
+  width: 350px;
+  height: 40px;
+}
+
+.cvv {
+  font-size: 1.45rem;
+  border: none;
+  outline: none;
+  border-bottom: 3px solid #c60021;
+  width: 150px;
+  height: 40px;
+  margin-left: 75%;
+}
+
+.card-number-div {
+  margin-top: 12%;
+  margin-left: 5%;
+  margin-right: 5%;
+  position: absolute;
+}
+
+.card-number {
+  font-size: 1.45rem;
+  border: none;
+  outline: none;
+  border-bottom: 3px solid #c60021;
+  width: 350px;
+  height: 40px;
+}
+
+.card-number-text {
+  font-size: 1.25rem;
+  margin-left: 5%;
+  color: darkgrey;
+  margin-top: 18%;
+  position: absolute;
+}
+
+.card-expiry-details-and-amount-div {
+  margin-top: 22%;
+  margin-left: 5%;
+  margin-right: 5%;
+  position: absolute;
+  display: flex;
+}
+
+.expiry-month {
+  width: 100px;
+  height: 45px;
+  font-size: 1.35rem;
+  border: none;
+  outline: none;
   background: transparent;
-    // border: 2px solid black;
-    font-family: "Jost", sans-serif;
-    font-family: "Redressed", cursive;
-    font-family: "Varela Round", sans-serif;
-  }
-  
-  
-  .expiry_year {
-    width: 90px;
-    height: 45px;
-    font-size: 20px;
-    margin-left: 20px;
+}
+
+.expiry-year {
+  width: 100px;
+  height: 45px;
+  font-size: 1.35rem;
+  margin-left: 20px;
   background: transparent;
   border: none;
-    outline: none;
-  // background-color: none;
-    // border: 2px solid black;
-    font-family: "Jost", sans-serif;
-    font-family: "Redressed", cursive;
-    font-family: "Varela Round", sans-serif;
-  }
-  .card_expiry_text {
-    font-size: 15px;
+  outline: none;
+}
+
+
+  .card-expiry-text {
+    font-size: 1.35rem;
     word-spacing: 3px;
-    margin-left: 30px;
-    margin-top: 10px;
-    height: 30px;
     color: darkgrey;
-    font-family: "Jost", sans-serif;
-    font-family: "Redressed", cursive;
-    font-family: "Varela Round", sans-serif;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 28%;
   }
-  .amount_payable{
+
+  .amount-payable{
       margin-left: 60px;
-      // margin-top: 160px;
       padding-left: 5px;
       background: none;
-      font-size: 20px;
-      font-weight: 600;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #c60021;
       border: none;
       outline: none;
-      border-bottom: 3px solid rgb(119, 119, 119);
+      border-bottom: black 3px solid;
       width: 300px;
-      height: 40px;
-      font-family: "Jost", sans-serif;
-      font-family: "Redressed", cursive;
-      font-family: "Varela Round", sans-serif;
       cursor: not-allowed;
   }
-  .amount_payable_text{
+
+
+  .amount-payable-text{
       font-size: 15px;
-      // word-spacing: 3px;
-      margin-left: 290px;
+      margin-left: 35.5%;
       margin-top: -30px;
-      height: 30px;
-      color: darkgrey;
+      color: #c60021;
       font-family: "Jost", sans-serif;
       font-family: "Redressed", cursive;
       font-family: "Varela Round", sans-serif;
   }
-  .pay_now_button{
-      width: 250px;
-      height: 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #11D99B;
-      border-radius: 12px;
-      font-size: 23px;
-      font-weight: 600;
-      border: none;
-      outline: none;
-      color: white;
-      margin-left: 180px;
-      margin-top: 25px;
-      font-family: "Jost", sans-serif;
-      font-family: "Redressed", cursive;
-      font-family: "Varela Round", sans-serif;
-  }
-  .pay_now_button:hover{
-      background-color: hsl(161, 85%, 42%);
-    cursor: pointer;
-  }
-  
-  // ending page
-  
-  .end_page_div{
-    background-color: white;
-    height: 310px;
-    width: 700px;
-    border-radius: 12px;
-    margin-left: 560px;
-    margin-top: 290px;
-    box-shadow: 0 0 5px 3px rgb(214, 214, 214);
-    font-family: "Jost", sans-serif;
-    font-family: "Redressed", cursive;
-    font-family: "Varela Round", sans-serif;
-  }
-  .booking_successful_title{
-    font-size: 35px;
-    position: absolute;
-    margin-top: 10px;
-    margin-left: 160px;
+
+
+  .pay-now-button{
+    width: 250px;
+    height: 55px;
+    padding: 1%;
+    outline: none;
+    font-size: 1.25rem;
     font-weight: 600;
-  }
-  .car_delivery_at_div{
-  font-size: 23px;
-  position: absolute;
-  margin-top: 100px;
-  margin-left: 30px;
-  }
-  .ending_page_car_registration_number_div{
-    font-size: 23px;
+    background-color: transparent;
+    border-radius: 30px;
+    color: #c60021;
+    border:  2px solid #e3e3e3;
     position: absolute;
-    margin-top: 160px;
-    margin-left: 30px;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
-  .go_to_home_button{
-    width: 150px;
-      height: 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #11D99B;
-      border-radius: 12px;
-      font-size: 23px;
-      font-weight: 600;
-      border: none;
-      outline: none;
-      color: white;
-      margin-left: 250px;
-      position: absolute;
-      margin-top: 230px;
-      font-family: "Jost", sans-serif;
-      font-family: "Redressed", cursive;
-      font-family: "Varela Round", sans-serif;
-  }
-  .go_to_home_button:hover{
-    background-color: hsl(161, 85%, 42%);
-    cursor: pointer;
-  }
+  
+.pay-now-button:hover{
+    border: #c60021 2px solid;
+    color: black;
+    box-shadow: #C60021 0px 7px 14px, #fff 0px 5px 5px;
+}
+
+ 
+.payment-confirmation-main-container{
+    background-color: #fff;
+    font-size: 1.25rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 65%;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}

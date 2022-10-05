@@ -2,12 +2,12 @@
   <div class="add_main_container">
   <div class="basic_detail">
   <%= form_for @properties do |f|  %>
-  <%= render 'shared/errors', object: @properties %>
+    <%= render 'shared/errors', object: @properties %>
   <table>
     <tr>
       <td class="name_td">
         <%= f.label :prop_name, class: 'form_label adding_page' %>
-        <%= f.text_field :prop_name, class: 'form_input', autofocus: true %>
+        <%= f.text_field :prop_name, class: 'form_input', autofocus: true, maximum="5" %>
       </td>
       <!-- <td>
         <%= f.label  "prop_name", "Image",class: 'form_label' %>
@@ -63,6 +63,4 @@
     <div class="sign_up_button">   
       <%= f.submit 'Add Property' , class: 'user_button' %>
     </div>
-<% end %>
-  </div>
-</section>
+  <%end%>

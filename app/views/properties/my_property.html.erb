@@ -25,8 +25,10 @@
               <div class="details"><p>Sq.Ft <span><%= prop.sqft%></span></p></div>
               <div class="details"><p>Rent <span><%= prop.amount%></span></p></div>
               <div class="details"><p>Distance To Hospital <span><%= prop.hsptl_dist%></span> </p></div>
-              <%= link_to "Delete", "/delete_prop/#{prop.id}",method: :delete, data: {confirm:
-        'Property will be deleted Permanently'} %>
+              <div class="btn-div">
+                <%= link_to "Delete", "/delete_prop/#{prop.id}",method: :delete, data: {confirm:
+                  'Property will be deleted Permanently'}, class: "delete-button" %>
+              </div>
             </div>
         </div>
         <%end%>

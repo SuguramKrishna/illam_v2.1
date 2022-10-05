@@ -263,3 +263,53 @@ color: #C60021;
   font-size: 1.25rem;
   line-height: 40px;
 }
+
+.buttn-div{
+  margin-top: 3%;
+}
+
+.delete-button{
+  display: inline-block;
+  margin-top: 5%;
+  background-color: #C60021;
+  color:#fff;
+  padding: 2%;
+  border:.2rem solid #C60021;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.delete-button:hover{
+  box-shadow: #C60021 0px 7px 14px, #fff 0px 5px 5px;
+}
+
+
+
+.confirm-div{
+  align-items: center;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.confirm-button{
+    width: 250px;
+    height: 55px;
+    padding: 1%;
+    outline: none;
+    font-size: 1.25rem;
+    font-weight: 600;
+    background-color: transparent;
+    border-radius: 30px;
+    color: #c60021;
+    border:  2px solid #e3e3e3;
+  }
+  
+.confirm-button:hover{
+    border: #c60021 2px solid;
+    color: black;
+    box-shadow: #C60021 0px 7px 14px, #fff 0px 5px 5px;
+}

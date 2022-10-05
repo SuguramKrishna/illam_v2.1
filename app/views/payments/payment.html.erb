@@ -1,7 +1,7 @@
 <section class="payment-section">
     <div class="payment-main-container">
-        <div class="payment_title">
-           <p class="">Your Payment</p>
+        <div class="payment-title">
+           <p>Your Payment</p>
         </div>
 
         <form action="/pay" method="post">
@@ -10,8 +10,9 @@
             name="authenticity_token"
             value="<%= form_authenticity_token %>"
           />
-        <div class="payment_basic_details">
-          <div class="card_holder_name_div">
+          <%= render 'shared/errors' , object: @payment-details %>
+        <div class="payment-basic-details">
+          <div class="card-holder-name-div">
             <input
               type="text"
               name="payment_details[card_holder_name]"
@@ -21,15 +22,15 @@
               placeholder="Card Holder Name"
               pattern="^[a-zA-Z0-9_ ]+( [a-zA-Z0-9_]+)*$"
               minlength="3"
-              class="card_holder_name"
+              class="card-holder-name"
             />
           </div>
-          <div class="cvv_div">
+          <div class="cvv-div">
             <input type="password" name="payment_details[password]" maxlength="3" minlength="3" required id="" placeholder="CVV" class="cvv" />
           </div>
         </div>
       
-        <div class="card_number_div">
+        <div class="card-number-div">
           <input
             type="password"
             name="payment_details[card_number]"
@@ -38,13 +39,14 @@
             minlength="16"
             id=""
             placeholder="XXXX XXXX XXXX XXXX"
-            class="card_number"
+            class="card-number"
           />
         </div>
-        <div class="card_number_text">Please enter your ATM card number.</div>
+
+        <div class="card-number-text">Please enter your ATM card number.</div>
       
-        <div class="car_expiry_details_and_amount_div">
-          <select name="payment_details[card_expiry_month]" id="" required class="expiry_month">
+        <div class="card-expiry-details-and-amount-div">
+          <select name="paymentdetails[card_expiry_month]" id="" required class="expiry-month">
             <option value="" disabled selected hidden >Month</option>
             <option value="jan">Jan</option>
             <option value="Feb">Feb</option>
@@ -60,7 +62,7 @@
             <option value="Dec">Dec</option>
           </select>
       
-          <select name="payment_details[card_expiry_year]" id="" required class="expiry_year">
+          <select name="payment_details[card_expiry_year]" id="" required class="expiry-year">
             <option value="" disabled selected hidden >Year</option>
             <option value="2024">2024</option>
             <option value="2025">2025</option>
@@ -75,8 +77,8 @@
             type="number"
             name=""
             id=""
-            value="<%= $details.amount %>"
-            class="amount_payable"
+            value= "<%= $details.amount %>"
+            class="amount-payable"
             disabled
           />
 
@@ -85,15 +87,15 @@
           name="payment_details[properties_id]"
           id=""
           value="<%= $details.id %>"
-          class="amount_payable"
+          class="amount-payable"
         />
         </div>
       
-        <div class="card_expiry_text">Card Exipry Details</div>
-        <div class="amount_payable_text">Amount payable is per day price.</div>
+        <div class="card-expiry-text">Card Exipry Details</div>
+        <div class="amount-payable-text">Amount payable is per month (In ₹).</div>
       
         <div  > 
-         <input type="submit" value="Pay Now" class="pay_now_button"> 
+         <input type="submit" value="Pay Now" class="pay-now-button"> 
         </div>
         </form>
       </div>
