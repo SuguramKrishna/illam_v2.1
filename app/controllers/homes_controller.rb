@@ -6,7 +6,7 @@ class HomesController < ApplicationController
   end
 
   def search_prop
-    @search_prop = Property.where('address Like ?', "%" + params[:query] + "%")
+    @search_prop = Property.where('address Like ? OR amount Like ? OR prop_name Like?', "%" + params[:query] + "%", "%" + params[:query] + "%", "%" + params[:query] + "%")
   end
 
   

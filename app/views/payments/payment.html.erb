@@ -10,7 +10,6 @@
             name="authenticity_token"
             value="<%= form_authenticity_token %>"
           />
-          <%= render 'shared/errors' , object: @payment-details %>
         <div class="payment-basic-details">
           <div class="card-holder-name-div">
             <input
@@ -95,7 +94,7 @@
         <div class="amount-payable-text">Amount payable is per month (In ₹).</div>
       
         <div  > 
-         <input type="submit" value="Pay Now" class="pay-now-button"> 
+         <input type="submit" value="Pay Now" class="pay-now-button">
         </div>
         </form>
       </div>

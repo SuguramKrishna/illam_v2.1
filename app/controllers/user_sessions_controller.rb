@@ -5,6 +5,7 @@ class UserSessionsController < ApplicationController
     @user_session = UserSession.new
   end
 
+  #Checking the login credentials
   def create
     @user_session = UserSession.new(user_session_params)
     if @user_session.save
@@ -15,6 +16,7 @@ class UserSessionsController < ApplicationController
     end
   end
 
+  #Used to logout the user who is signed in 
   def destroy
     current_user_session.destroy
     flash[:success] = "Goodbye!"

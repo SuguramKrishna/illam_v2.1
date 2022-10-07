@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'properties/listing'
 
+  
+
   get 'properties/my_property', to: 'properties#my_prop'
 
   get 'pages/build_prog'

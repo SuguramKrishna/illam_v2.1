@@ -1,10 +1,11 @@
 class PaymentsController < ApplicationController
 
+  #saving the details of the payment to the db with the user id and property id
   def pay
     @payment = PaymentDetail.new(pay_params)
     @payment.users_id = current_user.id
     if @payment.save
-      redirect_to "/properties/my_property"
+      redirect_to "/payments/payment_confirmation"
     else
       render 'payments/payment'
     end
