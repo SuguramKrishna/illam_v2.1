@@ -1,0 +1,62 @@
+<section class="add_section">
+<div class="add_main_container">
+ <div class="basic_detail">
+<%= form_for @property, url: "/properties/update/#{params[:id]}", method: :patch, local: true do |f| %>
+  <table>
+    <tr>
+      <td class="name_td">
+        <%= f.label :prop_name, class: 'form_label adding_page' %>
+        <%= f.text_field :prop_name, class: 'form_input', autofocus: true %>
+      </td> 
+    </tr>
+  </table>
+  </div>
+  <div class="prop_detail">
+  <table>
+    <tr>
+      <td>
+        <%= f.label  :prop_type, class: 'form_label' %>  
+        <%= f.select :prop_type, options_for_select([["Rent","Rent"],["Sales","Sales"],["Lease","Lease"]])%>
+      </td>
+
+      <td>
+        <%= f.label  :room, class: 'form_label' %>
+        <%= f.text_field :room, class: 'form_input' %>
+      </td>
+
+      <td>
+        <%= f.label  :sqft, class: 'form_label' %>
+        <%= f.text_field :sqft, class: 'form_input' %>
+      </td>
+    </tr>
+  </table>
+  </div>
+
+  <div class="surrounding_detail">
+    <table>
+      <tr>
+        <td class="dist_td">
+          <%= f.label  :hsptl_dist, class: 'form_label' %>
+          <%= f.text_field :hsptl_dist, class: 'form_input' %>
+        </td>
+
+        <td>
+          <%= f.label  :amount, class: 'form_label' %>
+          <%= f.text_field :amount,class: 'form_input' %>
+        </td>
+
+        <td>
+          <%= f.label  :address, class: 'form_label' %>
+          <%= f.text_field :address, class: 'form_input' %>
+        </td>
+      </tr>
+    </table>
+  </div>
+  
+  <div class="sign_up_button">   
+      <%= f.submit 'Add Property' , class: 'user_button' %>
+  </div>
+
+<% end %>
+</div>
+</section>

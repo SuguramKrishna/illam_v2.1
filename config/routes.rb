@@ -7,8 +7,6 @@ Rails.application.routes.draw do
 
   get 'properties/listing'
 
-  
-
   get 'properties/my_property', to: 'properties#my_prop'
 
   get 'pages/build_prog'
@@ -28,6 +26,10 @@ Rails.application.routes.draw do
   get '/booking/:id', to: 'properties#booking_confirmation'
 
   get '/search_prop', to: 'homes#search_prop'
+
+  get 'properties/:id/edit', to: 'properties#edit', as: 'edit_property'
+
+  patch 'properties/update/:id', to: 'properties#update'
 
   root to: 'homes#index'
 

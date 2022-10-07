@@ -28,7 +28,10 @@
               <div class="btn-div">
                 <%= link_to "Delete", "/delete_prop/#{prop.id}",method: :delete, data: {confirm:
                   'Property will be deleted Permanently'}, class: "delete-button" %>
+
+                  <%= link_to "Edit", edit_property_path(prop) %>
               </div>
+
             </div>
         </div>
         <%end%>

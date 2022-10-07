@@ -68,6 +68,26 @@ class PropertiesController < ApplicationController
     @search_prop = Property.where('address Like ? OR amount Like ? OR prop_name Like?', "%" + params[:query] + "%", "%" + params[:query] + "%", "%" + params[:query] + "%")
   end
 
+
+  #To edit the properties
+  def edit
+    @property = Property.find(params[:id])
+    render :edit
+    # @properties = Property.new(prop_params)
+  end
+
+  def update
+    @property = Property.find(params[:id])
+    if @property.update(params.require(:property).permit(:prop_name, :prop_type, :room, :sqft, :hsptl_dist, :amount, :address))
+      flash[:success] = "To-do item successfully updated!"
+      redirect_to "/properties/my_property"
+      puts @property
+    else
+      flash.now[:error] = "To-do item update failed"
+      render :edit
+    end
+  end
+
   private
   
   def prop_params
