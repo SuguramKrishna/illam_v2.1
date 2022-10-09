@@ -42,6 +42,7 @@ Rails.application.routes.draw do
 
 
 
+  get 'filter', to: 'properties#filter'
 
   resources :users, only: [:sign_up, :create]
 

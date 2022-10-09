@@ -1,4 +1,4 @@
-<section class="list_section">
+<section class="my_property_list_section">
 <div class="main-container">
 
   <!-- <div class="filter-div">
@@ -29,7 +29,7 @@
                 <%= link_to "Delete", "/delete_prop/#{prop.id}",method: :delete, data: {confirm:
                   'Property will be deleted Permanently'}, class: "delete-button" %>
 
-                  <%= link_to "Edit", edit_property_path(prop) %>
+                  <%= link_to "Edit", edit_property_path(prop), class: "edit-button" %>
               </div>
 
             </div>

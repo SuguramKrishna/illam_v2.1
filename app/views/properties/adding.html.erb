@@ -1,9 +1,9 @@
 <section class="add_section">
-  <div class="add_main_container">
+<div class="add_main_container">
   <div class="basic_detail">
-  <%= form_for @properties do |f|  %>
-  <%= render 'shared/errors', object: @properties %>
-  <table>
+    <%= form_for @properties do |f|  %>
+    <%= render 'shared/errors', object: @properties %>
+    <table>
     <tr>
       <td class="name_td">
         <%= f.label :prop_name, class: 'form_label adding_page' %>

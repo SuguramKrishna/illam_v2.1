@@ -88,6 +88,13 @@ class PropertiesController < ApplicationController
     end
   end
 
+  # Filtering the result with the property type and room
+  def filter
+    @filter = Property.where('prop_type Like ? AND room = ?', "%" + params[:type] + "%", params[:room])
+    puts @filter
+  end
+
+
   private
   
   def prop_params

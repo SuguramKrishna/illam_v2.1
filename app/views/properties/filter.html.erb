@@ -27,9 +27,10 @@
         </select>
 
           <button type="submit" class="user_button">Apply Filter</button>
-     </form> 
+     </form>
     </div>
     </div>
+
 
    <div class="list-main-container">
     <div class="search-div">
@@ -40,7 +41,7 @@
     </div>
 
     <div class="listing-container">
-        <% Property.all.each do |prop| %>     
+        <% @filter.each do |prop| %>     
         <div class="prop-box">
             <%= image_tag('home4.jpg',{class: 'bg-img' }) %>
             <div class="content">
@@ -56,45 +57,5 @@
          </div>
          <%end%>
     </div>
-  
-<!-- 
-<div class="popup" id="popup-overlay">
-  <div class="owner-detail">
-    <p class="owner-heading">
-      Owner Details
-    </p>
-
-    <p class="owner-contact">
-      <span><i class="fa-solid fa-user"></i></span> Name
-     </p>
-
-    <p class="owner-contact">
-     <span><i class="fa-solid fa-phone"></i></span> Phone Number
-    </p>
-
-    <p class="owner-contact">
-      <span><i class="fa-solid fa-envelope"></i></span> Email
-    </p>
-  </div>
-</div> -->
-
-
 </div>
 </section>
-
-
-
-<!-- 
-<script>
-
-
-
-  function popupover() {
-    document.getElementById("popup-overlay").style.display = "block";
-  }
-
-  function crossign() {
-    document.getElementById("popup-overlay").style.display = "none";
-  }
-
-</script> -->
