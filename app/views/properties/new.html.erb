@@ -6,7 +6,7 @@
   <table>
     <tr>
       <td class="name_td">
-        <%= f.label :prop_name, class: 'form_label adding_page' %>
+        <%= f.label :Property_Name, class: 'form_label adding_page' %>
         <%= f.text_field :prop_name, class: 'form_input', autofocus: true %>
       </td>
       <!-- <td>
@@ -21,17 +21,18 @@
   <table>
     <tr>
       <td>
-        <%= f.label  :prop_type, class: 'form_label' %>  
+        <%= f.label  :Property_Type, class: 'form_label' %>  
         <%= f.select :prop_type, options_for_select([["Rent","Rent"],["Sales","Sales"],["Lease","Lease"]])%>
       </td>
 
       <td>
-        <%= f.label  :room, class: 'form_label' %>
-        <%= f.number_field :room, class: 'form_input', max:5 %>
+        <%= f.label  :Room, class: 'form_label' %>
+        <!-- <%= f.number_field :room, class: 'form_input', max:5 %> -->
+        <%= f.select :room, options_for_select([[1,1],[2,2],[3,3],[4,4],[5,5]])%>
       </td>
 
       <td>
-        <%= f.label  :sqft, class: 'form_label' %>
+        <%= f.label  :Sqft, class: 'form_label' %>
         <%= f.text_field :sqft, class: 'form_input' %>
       </td>
     </tr>
@@ -42,17 +43,17 @@
     <table>
       <tr>
         <td class="dist_td">
-          <%= f.label  :hsptl_dist, class: 'form_label' %>
+          <%= f.label  :Distance_To_Hospital, class: 'form_label' %>
           <%= f.text_field :hsptl_dist, class: 'form_input' %>
         </td>
 
         <td>
-          <%= f.label  :amount, class: 'form_label' %>
+          <%= f.label  :Amount, class: 'form_label' %>
           <%= f.text_field :amount,class: 'form_input' %>
         </td>
 
         <td>
-          <%= f.label  :address, class: 'form_label' %>
+          <%= f.label  :Address, class: 'form_label' %>
           <%= f.text_field :address, class: 'form_input' %>
         </td>
       </tr>

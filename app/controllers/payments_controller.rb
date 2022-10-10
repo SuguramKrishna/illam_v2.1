@@ -4,11 +4,30 @@ class PaymentsController < ApplicationController
   def pay
     @payment = PaymentDetail.new(pay_params)
     @payment.users_id = current_user.id
-    if @payment.save
+    if @payment.save  
       redirect_to "/payments/payment_confirmation"
     else
       render 'payments/payment'
     end
+  end
+  
+  def payment_confirmation
+    # respond_to do |format|
+    #   format.html
+    #    format.pdf do
+    #    render pdf: "payment_confirmation.pdf"
+    #    end
+    # end
+    @payments = PaymentDetail.where(users_id:current_user.id)
+    respond_to do |format|
+     format.html
+      format.pdf do
+      pdf =  PaymentConfirmationPdf.new(@payments) 
+      send_data pdf.render, filename: 'payment_confirmation.pdf', type: 'application/pdf', disposition: "inline"
+      end 
+    end
+
+
   end
 
 

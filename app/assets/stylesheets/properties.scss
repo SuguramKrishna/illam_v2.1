@@ -103,7 +103,17 @@
 
 .filter-div {
   width: 100%;
-  height: 25%;
+  height: 15%;
+  background-color: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 8px;
+  padding: 24px 20px 0 20px;
+  margin-top: 6%;
+}
+
+.filter_list_section .filter-div{
+  width: 100%;
+  height: 42.5%;
   background-color: #fff;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   border-radius: 8px;
@@ -173,6 +183,11 @@ input.search-bar:focus {
 }
 
 .search_list_section {
+  background-color: #e3e3e3;
+  margin-top: 0.5%;
+}
+
+.filter_list_section{
   background-color: #e3e3e3;
   margin-top: 0.5%;
 }

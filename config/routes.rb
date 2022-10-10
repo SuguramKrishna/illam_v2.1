@@ -38,7 +38,9 @@ Rails.application.routes.draw do
   get 'payments/payment'
   match '/pay', to: 'payments#pay', via: :post
 
-  get 'payments/payment_confirmation'
+  get 'payments/payment_confirmation', to: 'payments#payment_confirmation', as: 'payment_confirmation'
+
+  resources "payments"
 
 
 

@@ -61,27 +61,14 @@ GEM
     connection_pool (2.3.0)
     crass (1.0.6)
     debug_inspector (1.1.0)
-    elastic-transport (8.1.0)
-      faraday (< 3)
-      multi_json
-    elasticsearch (8.4.0)
-      elastic-transport (~> 8)
-      elasticsearch-api (= 8.4.0)
-    elasticsearch-api (8.4.0)
-      multi_json
     erubis (2.7.0)
     execjs (2.8.1)
-    faraday (2.5.2)
-      faraday-net_http (>= 2.0, < 3.1)
-      ruby2_keywords (>= 0.0.4)
-    faraday-net_http (3.0.0)
     ffi (1.15.5-x64-mingw32)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    hashie (5.0.0)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
     jbuilder (2.9.1)
@@ -104,10 +91,15 @@ GEM
     mime-types-data (3.2022.0105)
     mini_mime (1.1.2)
     minitest (5.16.3)
-    multi_json (1.15.0)
     mysql2 (0.5.4)
     nokogiri (1.13.8-x64-mingw32)
       racc (~> 1.4)
+    pdf-core (0.9.0)
+    prawn (2.4.0)
+      pdf-core (~> 0.9.0)
+      ttfunk (~> 1.7)
+    prawn-table (0.2.2)
+      prawn (>= 1.3.0, < 3.0.0)
     racc (1.6.0)
     rack (1.6.13)
     rack-protection (3.0.1)
@@ -146,7 +138,6 @@ GEM
     redis (4.8.0)
     request_store (1.5.1)
       rack (>= 1.4)
-    ruby2_keywords (0.0.5)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -164,10 +155,6 @@ GEM
     sdoc (0.4.2)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
-    searchkick (3.1.3)
-      activemodel (>= 4.2)
-      elasticsearch (>= 5)
-      hashie
     sidekiq (5.2.8)
       connection_pool (~> 2.2, >= 2.2.2)
       rack (< 2.1.0)
@@ -187,6 +174,7 @@ GEM
     thor (1.2.1)
     thread_safe (0.3.6)
     tilt (2.0.11)
+    ttfunk (1.7.0)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -201,6 +189,9 @@ GEM
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
+    wicked_pdf (2.6.3)
+      activesupport
+    wkhtmltopdf-binary (0.12.6.5)
 
 PLATFORMS
   x64-mingw32
@@ -210,21 +201,23 @@ DEPENDENCIES
   byebug
   carrierwave
   coffee-rails (~> 4.1.0)
-  elasticsearch
   jbuilder (~> 2.0)
   jquery-rails
   mail_form
   mysql2 (>= 0.3.13, < 0.6.0)
+  prawn
+  prawn-table
   rails (= 4.2.11.3)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
-  searchkick
   sidekiq
   simple_form
   turbolinks
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
+  wicked_pdf
+  wkhtmltopdf-binary
 
 BUNDLED WITH
    1.17.3
