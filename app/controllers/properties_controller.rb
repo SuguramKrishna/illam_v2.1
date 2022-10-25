@@ -93,6 +93,7 @@ class PropertiesController < ApplicationController
     @filter = Property.where('prop_type Like ? AND room = ?', "%" + params[:type] + "%", params[:room])
     puts @filter
   end
+  
 
 
   private

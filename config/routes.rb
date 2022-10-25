@@ -60,6 +60,7 @@ Rails.application.routes.draw do
   get '/sign_up', to: 'users#sign_up', as: :sign_up
 
 
+  get 'payments/payment'
 
   match '/contacts',to: 'contacts#new',via: 'get'
   match '/properties',to: 'properties#new',via: 'get'
@@ -124,7 +125,5 @@ end
 
 require 'sidekiq/web'
 Rails.application.routes.draw do
-  get 'payments/payment'
-
   mount Sidekiq::Web => '/sidekiq'
 end
